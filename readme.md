@@ -67,9 +67,14 @@ Copy the `src/config/kong.php` to `/path/to/root/config/kong.php`
 Register the ServiceProvider in `bootstrap/app.php`:
 
 ```php
-$app->register(Ignittion\Kong\ServiceProvider::class);
+$app->register(Ignittion\Kong\KongServiceProvider::class);
 $app->configure('kong');
 ```
+
+Register Alias in `bootstrap/app.php` (optional):
+
++ Uncomment Facades: `$app->withFacades();`
++ Register Alias: `class_alias(Ignittion\Kong\Facades\Kong::class, 'Kong');`
 
 ## Usage
 
