@@ -48,7 +48,7 @@ Add the Service Provider in `config/app.php`:
 Ignittion\Kong\KongServiceProvider::class,
 ```
 
-Add the Class Alias in `config/app.php` (optional):
+Add the Class Alias in `config/app.php`:
 
 ```php
 'Kong' => Ignittion\Kong\Facades\Kong::class,
