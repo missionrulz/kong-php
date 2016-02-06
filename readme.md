@@ -71,6 +71,11 @@ $app->register(Ignittion\Kong\KongServiceProvider::class);
 $app->configure('kong');
 ```
 
+Register Alias in `bootstrap/app.php` (optional):
+
++ Uncomment Facades: `$app->withFacades();`
++ Register Alias: `class_alias(Ignittion\Kong\Facades\Kong::class, 'Kong');`
+
 ## Usage
 
 ### PHP
