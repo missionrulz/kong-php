@@ -1,0 +1,30 @@
+{
+    "name": "ignittion/kong-php",
+    "description": "A PHP Library for interacting with the Kong API Gateway Admin.",
+	"keywords": ["kong", "kong gateway", "laravel kong"],
+    "type": "Library",
+    "require": {
+		"php": ">=5.5.9",
+        "mashape/unirest-php": "2.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "mockery/mockery": "^0.9.4"
+    },
+	"support": {
+		"issues": "https://github.com/ignittion/kong-php/issues"
+	},
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jess Carlos",
+            "email": "jess@ignittion.io"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"Ignittion\\Kong\\": "src/Kong"
+		}
+	},
+    "minimum-stability": "dev"
+}
