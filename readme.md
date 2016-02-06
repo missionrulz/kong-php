@@ -67,7 +67,7 @@ Copy the `src/config/kong.php` to `/path/to/root/config/kong.php`
 Register the ServiceProvider in `bootstrap/app.php`:
 
 ```php
-$app->register(Ignittion\Kong\ServiceProvider::class);
+$app->register(Ignittion\Kong\KongServiceProvider::class);
 $app->configure('kong');
 ```
 
