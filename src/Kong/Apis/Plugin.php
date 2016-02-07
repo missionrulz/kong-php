@@ -79,6 +79,7 @@ class Plugin extends AbstractApi
      */
     public function add ($api, $plugin, array $body = [])
     {
+        $body['name']   = $plugin;
         return $this->call('post', "apis/{$api}/plugins", [], $body);
     }
 
