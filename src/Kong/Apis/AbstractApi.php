@@ -3,6 +3,7 @@
 namespace Ignittion\Kong\Apis;
 
 use Exception;
+use Ignittion\Kong\KongException;
 use Unirest\Request as RestClient;
 use stdClass;
 
