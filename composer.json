@@ -15,12 +15,7 @@
 		"issues": "https://github.com/ignittion/kong-php/issues"
 	},
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Jess Carlos",
-            "email": "jess@ignittion.io"
-        }
-    ],
+    "author": "Ignittion <opensource@mignittion.com> (https://ignittion.com)",
 	"autoload": {
 		"psr-4": {
 			"Ignittion\\Kong\\": "src/Kong"
