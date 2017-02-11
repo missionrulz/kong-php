@@ -57,14 +57,13 @@ class Consumer extends AbstractApi
     /**
      * Update or Create a Consumer
      *
-     * @param string $user
      * @param array $options
      * @return \stdClass
      */
-    public function upsert ($user, array $options = [])
+    public function upsert (array $options = [])
     {
         $body   = $this->createRequestBody($options);
-        return $this->call('put', "consumers/{$user}", [], $body);
+        return $this->call('put', "consumers", [], $body);
     }
 
     /**
