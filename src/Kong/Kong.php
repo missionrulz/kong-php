@@ -31,11 +31,11 @@ class Kong
      * @param string $url
      * @param integer $port
      */
-    public function __construct ($url, $port = 8001)
+    public function __construct($url, $port = 8001)
     {
         if (filter_var($url, FILTER_VALIDATE_URL) === false) {
-			throw new KongException("Invalid URL - {$url}");
-		}
+            throw new KongException("Invalid URL - {$url}");
+        }
 
         $this->port = $port;
         $this->url  = rtrim($url, '/');
@@ -46,7 +46,7 @@ class Kong
      *
      * @return \Ignittion\Kong\Apis\Api
      */
-    public function api ()
+    public function api()
     {
         return new Api($this->url, $this->port);
     }
@@ -56,7 +56,7 @@ class Kong
      *
      * @return \Ignittion\Kong\Apis\consumer
      */
-    public function consumer ()
+    public function consumer()
     {
         return new Consumer($this->url, $this->port);
     }
@@ -66,7 +66,7 @@ class Kong
      *
      * @return \Ignittion\Kong\Apis\Node
      */
-    public function node ()
+    public function node()
     {
         return new Node($this->url, $this->port);
     }
@@ -76,7 +76,7 @@ class Kong
      *
      * @return \Ignittion\Kong\Apis\Plugin
      */
-    public function plugin ()
+    public function plugin()
     {
         return new Plugin($this->url, $this->port);
     }
