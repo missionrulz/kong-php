@@ -1,5 +1,11 @@
 # Kong-php
 
+<p align="center">
+  <a href="https://styleci.io/repos/64416976"><img src="https://styleci.io/repos/64416976/shield?branch=master" alt="StyleCI"></a>
+</p>
+
+## About
+
 A PHP Library for interacting with the Kong API Gateway Admin.
 
 ## Official Documentation
