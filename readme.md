@@ -2,6 +2,9 @@
 
 <p align="center">
   <a href="https://styleci.io/repos/64416976"><img src="https://styleci.io/repos/64416976/shield?branch=master" alt="StyleCI"></a>
+  <a href="https://packagist.org/packages/ignittion/kong-php"><img src="https://poser.pugx.org/ignittion/kong-php/downloads" alt="Total Downloads"></a>
+  <a href="https://packagist.org/packages/ignittion/kong-php"><img src="https://poser.pugx.org/ignittion/kong-php/v/stable" alt="Latest Stable Version"></a>
+  <a href="https://packagist.org/packages/ignittion/kong-php"><img src="https://poser.pugx.org/ignittion/kong-php/license" alt="License"></a>
 </p>
 
 ## About
