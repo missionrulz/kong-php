@@ -1,6 +1,7 @@
 # Kong-php
 
 <p align="center">
+  <a href="https://travis-ci.org/ignittion/kong-php"><img src="https://travis-ci.org/ignittion/kong-php.svg?branch=master" alt="Build Status"></a>
   <a href="https://styleci.io/repos/64416976"><img src="https://styleci.io/repos/64416976/shield?branch=master" alt="StyleCI"></a>
   <a href="https://packagist.org/packages/ignittion/kong-php"><img src="https://poser.pugx.org/ignittion/kong-php/downloads?format=flat-square" alt="Total Downloads"></a>
   <a href="https://packagist.org/packages/ignittion/kong-php"><img src="https://poser.pugx.org/ignittion/kong-php/v/stable?format=flat-square" alt="Latest Stable Version"></a>
