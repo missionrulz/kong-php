@@ -27,7 +27,8 @@ class Kong
     /**
      * Class Constructor
      *
-     * @throws \Ignittion\Kong\KongException when non-RFC compliant url is given.
+     * @throws \Ignittion\Kong\Exceptions\InvalidUrlException when non-RFC
+     *      compliant url is given.
      *
      * @param string $url
      * @param integer $port
