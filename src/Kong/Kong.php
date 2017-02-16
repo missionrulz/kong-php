@@ -6,6 +6,7 @@ use Ignittion\Kong\Apis\Api;
 use Ignittion\Kong\Apis\Consumer;
 use Ignittion\Kong\Apis\Node;
 use Ignittion\Kong\Apis\Plugin;
+use Ignittion\Kong\Exceptions\InvalidUrlException;
 
 class Kong
 {
@@ -26,7 +27,8 @@ class Kong
     /**
      * Class Constructor
      *
-     * @throws \Ignittion\Kong\KongException when non-RFC compliant url is given.
+     * @throws \Ignittion\Kong\Exceptions\InvalidUrlException when non-RFC
+     *      compliant url is given.
      *
      * @param string $url
      * @param integer $port
@@ -34,7 +36,7 @@ class Kong
     public function __construct($url, $port = 8001)
     {
         if (filter_var($url, FILTER_VALIDATE_URL) === false) {
-            throw new KongException("Invalid URL - {$url}");
+            throw new InvalidUrlException($url);
         }
 
         $this->port = $port;
