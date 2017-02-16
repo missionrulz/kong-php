@@ -3,7 +3,7 @@
 namespace Ignittion\Kong\Apis;
 
 use Exception;
-use Ignittion\Kong\KongException;
+use Ignittion\Kong\Exceptions\KongHttpException;
 use Unirest\Request as RestClient;
 use stdClass;
 
@@ -73,7 +73,8 @@ abstract class AbstractApi
     /**
      * The underlying call to the Kong Server
      *
-     * @throws \Ignittion\Kong\KongException when something goes wrong with the Http request
+     * @throws \Ignittion\Kong\Exceptions\KongHttpException when something goes
+     *      wrong with the Http request.
      *
      * @param string $verb
      * @param string $uri
@@ -117,7 +118,7 @@ abstract class AbstractApi
                     throw new Exception('Unknown HTTP Request method.');
             }
         } catch (Exception $e) {
-            throw new KongException($e->getMessage());
+            throw new KongHttpException($e->getMessage());
         }
 
         // save this request
