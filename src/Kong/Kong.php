@@ -15,7 +15,7 @@ class Kong
      *
      * @var integer
      */
-    protected $port = 8001;
+    protected $port;
 
     /**
      * The based URL to the Kong Gateway
