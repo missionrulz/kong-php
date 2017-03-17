@@ -25,6 +25,13 @@ class Kong
     protected $url;
 
     /**
+     * Array of headers that should be passed to all requests
+     *
+     * @var array
+     */
+    protected $headers;
+    
+    /**
      * Class Constructor
      *
      * @throws \Ignittion\Kong\Exceptions\InvalidUrlException when non-RFC
@@ -32,8 +39,9 @@ class Kong
      *
      * @param string $url
      * @param integer $port
+     * @param array $headers
      */
-    public function __construct($url, $port = 8001)
+    public function __construct($url, $port = 8001, $headers = [])
     {
         if (filter_var($url, FILTER_VALIDATE_URL) === false) {
             throw new InvalidUrlException($url);
@@ -41,6 +49,7 @@ class Kong
 
         $this->port = $port;
         $this->url  = rtrim($url, '/');
+        $this->headers = $headers;
     }
 
     /**
@@ -50,7 +59,7 @@ class Kong
      */
     public function api()
     {
-        return new Api($this->url, $this->port);
+        return new Api($this->url, $this->port, $this->headers);
     }
 
     /**
@@ -60,7 +69,7 @@ class Kong
      */
     public function consumer()
     {
-        return new Consumer($this->url, $this->port);
+        return new Consumer($this->url, $this->port, $this->headers);
     }
 
     /**
@@ -70,7 +79,7 @@ class Kong
      */
     public function node()
     {
-        return new Node($this->url, $this->port);
+        return new Node($this->url, $this->port, $this->headers);
     }
 
     /**
@@ -80,6 +89,6 @@ class Kong
      */
     public function plugin()
     {
-        return new Plugin($this->url, $this->port);
+        return new Plugin($this->url, $this->port, $this->headers);
     }
 }

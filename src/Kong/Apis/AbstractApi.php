@@ -59,15 +59,23 @@ abstract class AbstractApi
     protected $url;
 
     /**
+     * Global request headers
+     *
+     * @var array
+     */
+    protected $request_headers;
+
+    /**
      * Class Constructor
      *
      * @param string $url
      * @param integer $port
      */
-    public function __construct($url, $port)
+    public function __construct($url, $port, $headers)
     {
         $this->port    = $port;
         $this->url    = $url;
+        $this->request_headers = $headers;
     }
 
     /**
@@ -87,6 +95,7 @@ abstract class AbstractApi
         $verb        = strtoupper($verb);
         $api        = "{$this->url}:{$this->port}/{$uri}";
         $headers    = array_merge(
+            $this->request_headers,
             $headers,
             ['Content-Type: application/json']
         );
