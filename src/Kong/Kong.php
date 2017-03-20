@@ -23,7 +23,7 @@ class Kong
      * @var string
      */
     protected $url;
- 
+
     /**
      * Class Constructor
      *
