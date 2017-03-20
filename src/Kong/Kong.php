@@ -23,13 +23,6 @@ class Kong
      * @var string
      */
     protected $url;
-
-    /**
-     * Array of headers that should be passed to all requests
-     *
-     * @var array
-     */
-    protected $headers;
     
     /**
      * Class Constructor
@@ -39,9 +32,8 @@ class Kong
      *
      * @param string $url
      * @param integer $port
-     * @param array $headers
      */
-    public function __construct($url, $port = 8001, $headers = [])
+    public function __construct($url, $port = 8001)
     {
         if (filter_var($url, FILTER_VALIDATE_URL) === false) {
             throw new InvalidUrlException($url);
@@ -49,7 +41,6 @@ class Kong
 
         $this->port = $port;
         $this->url  = rtrim($url, '/');
-        $this->headers = $headers;
     }
 
     /**
@@ -59,7 +50,7 @@ class Kong
      */
     public function api()
     {
-        return new Api($this->url, $this->port, $this->headers);
+        return new Api($this->url, $this->port);
     }
 
     /**
@@ -69,7 +60,7 @@ class Kong
      */
     public function consumer()
     {
-        return new Consumer($this->url, $this->port, $this->headers);
+        return new Consumer($this->url, $this->port);
     }
 
     /**
@@ -79,7 +70,7 @@ class Kong
      */
     public function node()
     {
-        return new Node($this->url, $this->port, $this->headers);
+        return new Node($this->url, $this->port);
     }
 
     /**
@@ -89,6 +80,6 @@ class Kong
      */
     public function plugin()
     {
-        return new Plugin($this->url, $this->port, $this->headers);
+        return new Plugin($this->url, $this->port);
     }
 }
