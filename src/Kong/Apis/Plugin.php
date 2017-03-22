@@ -95,7 +95,7 @@ class Plugin extends AbstractApi
      */
     public function update($api, $plugin, array $body = [])
     {
-        return $this->call('patch', "apis/{$api}/plugins/{$id}", [], $body);
+        return $this->call('patch', "apis/{$api}/plugins/{$plugin}", [], $body);
     }
 
     /**
